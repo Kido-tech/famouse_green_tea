@@ -1,0 +1,461 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color: rgb(8, 41, 8);
+    font-family: 'Kanit', sans-serif;
+}
+
+.logo{
+    color: rgb(207, 205, 205);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 20px;
+}
+
+.nav-links{
+    display: flex;
+    width: 30%;
+    justify-content: space-around;
+}
+
+.nav-links li{
+    list-style: none;
+}
+
+.nav-links a{
+    color: rgb(207, 205, 205);
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.nav-links a:hover{
+    color: green;
+}
+
+.burger{
+    display: none;
+    cursor: pointer;
+}
+
+.burger div{
+    width: 25px;
+    height: 3px;
+    background-color: rgb(207, 205, 205);
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+@media screen and (max-width:1700px){
+    .nav-links{
+        width: 50%;
+    }
+
+    .text-box-2{
+        width: 100px;
+        position: absolute;
+        top: 200px;
+        right: auto;
+        color: whitesmoke;
+    }
+
+    
+}
+
+@media screen and (max-width:1200px){
+    .product-content h1{
+        margin-left: 4rem;
+    }
+    
+    .product-content p{
+        margin-left: 4rem;
+    }
+}
+@media screen and (max-width:1000px){
+    .product{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width:800px){
+    body{
+        overflow-x: hidden;
+    }
+    .nav-links{
+        position: absolute;
+        right: 0px;
+        height: 93.7vh;
+        top: 8vh;
+        z-index: 1;
+        background-color: rgb(8, 41, 8);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        justify-items: space-between;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+
+    .nav-links li{
+        opacity: 0;
+    }
+
+    .burger{
+        display: block;
+    }
+
+    .product{
+        display: flex;
+        flex-direction: column;
+        padding: 10rem;
+    }
+
+    .contact-us .contact-us-form main .contact-form input{
+        width: 500px;
+    }
+    .contact-us .contact-us-form main .contact-form textarea{
+        width: 500px;
+    }
+
+    .contact-us .contact-us-form main .contact-form button{
+        width: 40%;
+    }
+}
+
+.nav-active{
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2{
+    opacity: 0;
+}
+.toggle .line3{
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/*Image slider*/
+
+#slider{
+    overflow: hidden;
+}
+
+#slider figure{
+    position: relative;
+    width: 500%;
+    margin: 0;
+    left: 0;
+    animation: 20s slider infinite;
+}
+
+#slider figure img{
+    width: 20%;
+    height: 600px;
+    float: left;
+}
+
+@keyframes slider{
+    0%{
+        left: 0;
+    }
+    20%{
+        left: 0;
+    }
+    25%{
+        left: -100%;
+    }
+    45%{
+        left: -100%;
+    }
+    50%{
+        left: -200%;
+    }
+    70%{
+        left: -200%;
+    }
+    75%{
+        left: -300%;
+    }
+    95%{
+        left: -300%;
+    }
+    100%{
+        left: -400%;
+    }
+}
+
+.text-box{
+    width: 600px;
+    position: absolute;
+    top: 200px;
+    left: 100px;
+    color: whitesmoke;
+}
+
+.text-box h1{
+    margin-bottom: 40px;
+}
+
+.text-box p{
+    font-size: 14px;
+    line-height: 18px;
+    margin-top: 80px;
+}
+
+.text-box span{
+    background: red;
+    height: 1px;
+    width: 100px;
+    position: absolute;
+    left: 0;
+}
+
+.about-green-tea h1{
+    padding: 28px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 45px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.content{
+    padding: 30px;
+    display: flex;
+}
+
+.content img{
+    width: 40%;
+    border: 3px solid green;
+    border-radius: 5px;
+}
+
+.content p{
+    letter-spacing: 2px;
+    line-height: 18px;
+    text-align: justify;
+    text-justify: inter-word;
+    padding-left: 13px;
+}
+
+.text-box-2{
+    width: 600px;
+    position: absolute;
+    top: 200px;
+    left: 1450px;
+    color: whitesmoke;
+}
+
+.text-box-2 h1{
+    margin-bottom: 40px;
+}
+
+.text-box-2 p{
+    font-size: 14px;
+    line-height: 18px;
+    margin-top: 80px;
+}
+
+.text-box-2 span{
+    background: red;
+    height: 1px;
+    width: 100px;
+    position: absolute;
+    left: 0;
+}
+.text-box-3{
+    width: 600px;
+    position: absolute;
+    top: 200px;
+    left: 2800px;
+    color: whitesmoke;
+}
+
+.text-box-3 h1{
+    margin-bottom: 40px;
+}
+
+.text-box-3 p{
+    font-size: 14px;
+    line-height: 18px;
+    margin-top: 80px;
+}
+
+.text-box-3 span{
+    background: red;
+    height: 1px;
+    width: 100px;
+    position: absolute;
+    left: 0;
+}
+
+.container{
+    margin: 10px;
+    padding: 55px;
+}
+
+.container h1{
+    padding: 28px;
+    margin-bottom: 25px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: underline rgb(10, 45, 10);
+    font-size: 45px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    color: green
+}
+
+.container img{
+    float: left;
+    width: 350px;
+    height: 300px;
+    border: 3px solid green;
+    margin-right: 30px;
+}
+
+.container .container-text p{
+    text-align: justify;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.product{
+    background-color: rgb(8, 41, 8);
+    display: flex;
+    padding: 50px;
+    justify-content: space-between;
+}
+
+.product-content{
+    color: white;
+    text-transform: uppercase;
+    text-align: justify;
+    width: 500px;
+    margin-right: 80px;
+    margin-top: 40px;
+}
+
+.product-content h1{
+    padding-bottom: 30px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 35px;
+}
+
+.product-content p{
+    padding-bottom: 30px;
+    font-family: monospace;
+    font-size: 20px;
+    margin-top: 3rem;
+}
+
+.product-content button{
+    width: 85px;
+    height: 35px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 26rem;
+    margin-top: 3rem;
+    color: rgb(8, 21, 8);
+}
+.product-content button:hover{
+    background-color: rgb(8, 21, 8);
+    color: whitesmoke;
+}
+
+.product-image img{
+    width: 300px;
+    height: 350px;
+    margin-left: 50px;
+    margin-top: 20px;
+    box-shadow: 10px 10px rgb(183, 173, 173);
+}
+
+.contact-us{
+    background: gainsboro;
+    text-align: center;
+    padding: 5rem;
+}
+
+
+
+.contact-us-form main p{
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 3rem;
+    color: green;
+}
+
+.contact-form input{
+    width: 40%;
+    height: 39px;
+    margin-top: 2rem;
+    border: 2px solid white;
+    border-radius: 5px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 14px;
+    font-weight: lighter;
+}
+
+.contact-form textarea{
+    width: 40%;
+    height: 280px;
+    margin-top: 2rem;
+    border: 2px solid white;
+    border-radius: 5px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 14px;
+    font-weight: lighter;
+}
+
+.contact-form button{
+    width: 7%;
+    height: 35px;
+    margin-top: 2rem;
+    margin-left: 18rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+footer{
+    background-color: rgb(0, 55, 0);
+    height: 40px;
+    padding: 1rem;
+}
+
+footer p{
+    color: white;
+    font-size: 16px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+}
